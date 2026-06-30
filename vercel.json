@@ -1,5 +1,12 @@
 {
   "framework": "nextjs",
   "installCommand": "npm ci",
-  "buildCommand": "npm run build"
+  "buildCommand": "npm run build",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/campaignkit",
+      "permanent": false
+    }
+  ]
 }

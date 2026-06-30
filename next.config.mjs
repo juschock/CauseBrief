@@ -5,6 +5,16 @@ const nextConfig = {
   outputFileTracingRoot: import.meta.dirname,
   images: {
     unoptimized: true
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/campaignkit',
+        permanent: false,
+        basePath: false
+      }
+    ];
   }
 };
 
