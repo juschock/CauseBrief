@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { PRODUCT_EXCLUSIONS_DISCLAIMER, PRODUCT_NAME } from "@/lib/site"
 
 const footerLinks = [
   { label: "How It Works", href: "/#how-it-works" },
@@ -16,10 +17,10 @@ export function SiteFooter() {
           <div className="max-w-sm">
             <div className="flex items-center gap-2">
               <span className="flex size-8 items-center justify-center rounded-lg bg-primary font-heading text-base font-semibold text-primary-foreground">
-                C
+                {PRODUCT_NAME.charAt(0)}
               </span>
               <span className="font-heading text-lg font-semibold text-foreground">
-                CauseBrief
+                {PRODUCT_NAME}
                 <span className="ml-1.5 text-xs font-normal text-muted-foreground">by Racoben</span>
               </span>
             </div>
@@ -65,9 +66,7 @@ export function SiteFooter() {
 
         <div className="mt-10 border-t border-border pt-6">
           <p className="text-xs leading-relaxed text-muted-foreground">
-            CauseBrief provides campaign copy and planning materials. It does not include custom
-            graphic design, ad buying, email sending, social media posting, list management, or
-            guaranteed campaign results.
+            {PRODUCT_EXCLUSIONS_DISCLAIMER}
           </p>
           <p className="mt-4 text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} Racoben. All rights reserved.

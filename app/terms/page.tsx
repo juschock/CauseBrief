@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
+import { PRODUCT_LEGAL_DISCLAIMER } from '@/lib/site';
 
 export const metadata: Metadata = { title: 'Terms' };
 
@@ -13,8 +14,7 @@ export default function TermsPage() {
           <h1 className="font-heading text-3xl font-semibold text-foreground">Terms</h1>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>
-              CauseBrief provides campaign copy and planning materials. It is not legal, fundraising compliance, tax,
-              or advertising advice. Delivery timelines assume a complete brief. Results are not guaranteed.
+              {PRODUCT_LEGAL_DISCLAIMER} Delivery timelines assume a complete brief. Results are not guaranteed.
             </p>
             <p>
               You are responsible for reviewing final details before publishing and for using materials in the platforms

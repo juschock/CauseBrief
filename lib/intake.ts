@@ -1,3 +1,5 @@
+import { KIT_PRICE, PRODUCT_NAME } from '@/lib/site';
+
 export const campaignTypes = [
   'Fundraiser',
   'Gala / Event',
@@ -82,7 +84,7 @@ export function formatBriefForEmail(data: BriefFormData) {
   const type = data.campaignType === 'Other' ? data.campaignTypeOther : data.campaignType;
   const tone = data.tone === 'Other' ? data.toneOther : data.tone;
   return [
-    'CauseBrief $99 Campaign Package — New Brief',
+    `${PRODUCT_NAME} ${KIT_PRICE} Campaign Package — New Brief`,
     '',
     `Organization: ${data.organizationName}`,
     `Campaign / Event: ${data.campaignName}`,

@@ -1,4 +1,5 @@
 import { ShieldCheck } from "lucide-react"
+import { PRODUCT_SCOPE_INTRO } from "@/lib/site"
 
 export function TrustLimitations() {
   return (
@@ -12,7 +13,7 @@ export function TrustLimitations() {
             Clear scope. Usable materials. No false promises.
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            CauseBrief helps you prepare campaign copy and planning materials. It does not
+            {PRODUCT_SCOPE_INTRO} It does not
             guarantee donations, sales, attendance, ticket purchases, press coverage, ad approval,
             or social media reach.
           </p>

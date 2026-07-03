@@ -6,11 +6,11 @@ import { SiteHeader } from '@/components/site-header';
 import { Button } from '@/components/ui/button';
 import { faqs } from '@/lib/content';
 import { ckPath } from '@/lib/nav';
-import { KIT_PRICE } from '@/lib/site';
+import { KIT_PRICE, PRODUCT_NAME } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'FAQ',
-  description: 'Common questions about CauseBrief — pricing, delivery, scope, and what is included.'
+  description: `Common questions about ${PRODUCT_NAME} — pricing, delivery, scope, and what is included.`
 };
 
 export default function FaqPage() {

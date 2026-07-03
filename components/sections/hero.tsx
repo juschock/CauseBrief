@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Clock, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { publicAsset, TAGLINE } from '@/lib/site';
+import { publicAsset, PRODUCT_NAME, TAGLINE } from '@/lib/site';
 
 export function Hero() {
   return (
@@ -18,7 +18,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            CauseBrief prepares a polished campaign package from the details of your event, fundraiser, promotion, or local
+            {PRODUCT_NAME} prepares a polished campaign package from the details of your event, fundraiser, promotion, or local
             campaign — polished emails, social posts, flyer copy, landing page copy, subject lines, CTAs, and a
             simple posting schedule.
           </p>

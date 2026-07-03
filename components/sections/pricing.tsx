@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { PRODUCT_EXCLUSIONS_DISCLAIMER } from "@/lib/site"
 
 const includes = [
   "3-email sequence",
@@ -60,9 +61,7 @@ export function Pricing() {
               />
 
               <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-                CauseBrief provides campaign copy and planning materials. It does not include
-                custom graphic design, ad buying, email sending, social media posting, list
-                management, or guaranteed campaign results.
+                {PRODUCT_EXCLUSIONS_DISCLAIMER}
               </p>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import { PRODUCT_NAME } from '@/lib/site';
+
 export const audienceGroups = [
   {
     title: 'Small Nonprofits',
@@ -144,7 +146,7 @@ export const faqs = [
   { q: 'Is this a subscription?', a: 'No. V1 is a fixed-price campaign package.' },
   {
     q: 'Do you send the emails or post on social media?',
-    a: 'No. CauseBrief provides the materials. You publish, send, print, or post them using your own tools and accounts.'
+    a: `No. ${PRODUCT_NAME} provides the materials. You publish, send, print, or post them using your own tools and accounts.`
   },
   {
     q: 'Do I need a website?',
@@ -166,11 +168,11 @@ export const faqs = [
   },
   {
     q: 'Can nonprofits use this?',
-    a: 'Yes. CauseBrief is especially useful for fundraisers, donor appeals, adoption events, volunteer drives, galas, local charity events, and community campaigns.'
+    a: `Yes. ${PRODUCT_NAME} is especially useful for fundraisers, donor appeals, adoption events, volunteer drives, galas, local charity events, and community campaigns.`
   },
   {
     q: 'Is this legal, fundraising, or advertising advice?',
-    a: 'No. CauseBrief provides campaign copy and planning materials. It is not legal, fundraising compliance, tax, or advertising advice.'
+    a: `No. ${PRODUCT_NAME} provides campaign copy and planning materials. It is not legal, fundraising compliance, tax, or advertising advice.`
   },
   {
     q: 'Can you guarantee results?',

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { PRODUCT_NAME } from "@/lib/site"
 
 const navLinks = [
   { label: "How It Works", href: "/#how-it-works" },
@@ -22,10 +23,10 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary font-heading text-base font-semibold text-primary-foreground">
-            C
+            {PRODUCT_NAME.charAt(0)}
           </span>
           <span className="font-heading text-lg font-semibold leading-none text-foreground">
-            CauseBrief
+            {PRODUCT_NAME}
             <span className="ml-1.5 text-xs font-normal text-muted-foreground">by Racoben</span>
           </span>
         </Link>

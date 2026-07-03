@@ -1,3 +1,5 @@
+import { PRODUCT_NAME } from '@/lib/site';
+
 const examples = [
   {
     title: "Animal Rescue Adoption Drive",
@@ -35,7 +37,7 @@ export function Examples() {
             Examples
           </span>
           <h2 className="mt-3 text-balance font-heading text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-            Example campaigns CauseBrief can support.
+            Example campaigns {PRODUCT_NAME} can support.
           </h2>
         </div>
 

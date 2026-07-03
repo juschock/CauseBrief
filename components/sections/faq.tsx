@@ -1,51 +1,5 @@
 import { Plus } from "lucide-react"
-
-const faqs = [
-  {
-    q: "Is this a subscription?",
-    a: "No. V1 is a fixed-price campaign package.",
-  },
-  {
-    q: "Do you send the emails or post on social media?",
-    a: "No. CauseBrief provides the materials. You publish, send, print, or post them using your own tools and accounts.",
-  },
-  {
-    q: "Do I need a website?",
-    a: "No. We can provide event page or landing page copy you can use on Eventbrite, Givebutter, GoFundMe, Facebook, your existing site, or a simple document.",
-  },
-  {
-    q: "Do you design graphics?",
-    a: "V1 includes flyer copy and graphics suggestions, not custom graphic design. You can use the copy in Canva, a flyer template, or with your designer.",
-  },
-  {
-    q: "Can I edit the materials?",
-    a: "Yes. The package is delivered in editable formats.",
-  },
-  {
-    q: "How fast is delivery?",
-    a: "Within 48 hours after receiving a complete campaign brief.",
-  },
-  {
-    q: "What if my campaign is urgent?",
-    a: "If your deadline is very soon, include that in the brief. Rush delivery may be offered later, but V1 delivery is within 48 hours.",
-  },
-  {
-    q: "What if I do not know what channels I need?",
-    a: "Select the ones you already use. If you are unsure, choose Email, Facebook, Instagram, Flyer/Print, and Landing Page/Event Page as a general starter set.",
-  },
-  {
-    q: "Can nonprofits use this?",
-    a: "Yes. CauseBrief is especially useful for fundraisers, donor appeals, adoption events, volunteer drives, galas, local charity events, and community campaigns.",
-  },
-  {
-    q: "Is this legal, fundraising, or advertising advice?",
-    a: "No. CauseBrief provides campaign copy and planning materials. It is not legal, fundraising compliance, tax, or advertising advice.",
-  },
-  {
-    q: "Can you guarantee results?",
-    a: "No. Campaign results depend on your audience, timing, offer, list quality, local awareness, and execution.",
-  },
-]
+import { faqs } from "@/lib/content"
 
 export function Faq() {
   return (

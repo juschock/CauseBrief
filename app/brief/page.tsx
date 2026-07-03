@@ -3,7 +3,7 @@ import { Clock } from 'lucide-react';
 import { BriefForm } from '@/components/brief-form';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
-import { KIT_PRICE } from '@/lib/site';
+import { KIT_PRICE, PRODUCT_NAME } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Start Your Campaign Brief',
@@ -22,7 +22,7 @@ export default function BriefPage() {
               Most briefs take 5–10 minutes
             </span>
             <h1 className="mt-5 text-balance font-heading text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-              Start your CauseBrief
+              Start your {PRODUCT_NAME}
             </h1>
             <p className="mx-auto mt-3 max-w-xl text-pretty leading-relaxed text-muted-foreground">
               You do not need perfect marketing copy here. Just give us the facts, goals, links, and tone you want us

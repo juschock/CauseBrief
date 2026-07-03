@@ -1,3 +1,5 @@
+import { PRODUCT_NAME } from '@/lib/site';
+
 const tasks = [
   "Write the announcement",
   "Come up with subject lines",
@@ -24,7 +26,7 @@ export function Problem() {
               whoever has time.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              CauseBrief gives you a polished starting package built around your actual campaign.
+              {PRODUCT_NAME} gives you a polished starting package built around your actual campaign.
             </p>
           </div>
 

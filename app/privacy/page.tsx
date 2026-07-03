@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
+import { PRODUCT_NAME } from '@/lib/site';
 
 export const metadata: Metadata = { title: 'Privacy' };
 
@@ -13,7 +14,7 @@ export default function PrivacyPage() {
           <h1 className="font-heading text-3xl font-semibold text-foreground">Privacy</h1>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>
-              CauseBrief V1 does not use accounts or a customer-facing database. When you submit a campaign brief via
+              {PRODUCT_NAME} V1 does not use accounts or a customer-facing database. When you submit a campaign brief via
               email, your information is handled through your email provider and Racoben&apos;s manual fulfillment process.
             </p>
             <p>

@@ -2,7 +2,7 @@ import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
 import { Fraunces, Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { PARENT_BRAND, PRODUCT_NAME, TAGLINE, publicUrl } from '@/lib/site';
+import { PARENT_BRAND, PRODUCT_META_DESCRIPTION, PRODUCT_NAME, TAGLINE, publicUrl } from '@/lib/site';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -18,8 +18,7 @@ export const metadata: Metadata = {
     default: `${PRODUCT_NAME} by ${PARENT_BRAND} — ${TAGLINE}`,
     template: `%s | ${PRODUCT_NAME}`
   },
-  description:
-    'CauseBrief prepares a polished campaign package from one structured brief — emails, social posts, landing page copy, flyer copy, press release, subject lines, CTAs, and a posting schedule. Prepared and human-reviewed by Racoben, delivered within 48 hours.',
+  description: PRODUCT_META_DESCRIPTION,
   icons: {
     icon: [
       { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },

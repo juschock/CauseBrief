@@ -1,4 +1,4 @@
-import { publicAsset } from '@/lib/site';
+import { PRODUCT_NAME, publicAsset } from '@/lib/site';
 
 const uses = [
   'Paste emails into Mailchimp or Constant Contact.',
@@ -30,7 +30,7 @@ export function UseAnywhere() {
             Use your package anywhere you already promote your work.
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            CauseBrief is connective tissue, not another platform to learn. Drop the materials straight into the
+            {PRODUCT_NAME} is connective tissue, not another platform to learn. Drop the materials straight into the
             tools and channels you already use.
           </p>
           <ul className="mt-6 space-y-3">

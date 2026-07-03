@@ -13,7 +13,7 @@ import {
   toneOptions
 } from '@/lib/intake';
 import { ckPath } from '@/lib/nav';
-import { INTAKE_EMAIL } from '@/lib/site';
+import { INTAKE_EMAIL, PRODUCT_NAME } from '@/lib/site';
 
 const fieldClass =
   'w-full rounded-lg border border-input bg-card px-3.5 py-2.5 text-sm text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground/70 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30';
@@ -122,7 +122,7 @@ export function BriefForm() {
     }
 
     const body = encodeURIComponent(formatBriefForEmail(data));
-    const subject = encodeURIComponent(`CauseBrief Brief — ${data.campaignName}`);
+    const subject = encodeURIComponent(`${PRODUCT_NAME} Brief — ${data.campaignName}`);
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     window.location.href = `mailto:${INTAKE_EMAIL}?subject=${subject}&body=${body}`;
@@ -141,13 +141,13 @@ export function BriefForm() {
           {data.campaignName ? (
             <>
               If your email app opened, send the message to complete your submission. We&apos;ll review the details for{' '}
-              <span className="font-medium text-foreground">{data.campaignName}</span> and prepare your CauseBrief campaign package for
+              <span className="font-medium text-foreground">{data.campaignName}</span> and prepare your {PRODUCT_NAME} campaign package for
               delivery within 48 hours.
             </>
           ) : (
             <>
               If your email app opened, send the message to complete your submission. We&apos;ll review the details and
-              prepare your CauseBrief campaign package for delivery within 48 hours.
+              prepare your {PRODUCT_NAME} campaign package for delivery within 48 hours.
             </>
           )}
         </p>

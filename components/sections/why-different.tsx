@@ -1,4 +1,5 @@
 import { X, Check } from "lucide-react"
+import { PRODUCT_NAME } from "@/lib/site"
 
 const without = [
   "A blank editor staring back at you",
@@ -23,7 +24,7 @@ export function WhyDifferent() {
             Not another marketing platform.
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Most tools hand you a blank editor or a dashboard. CauseBrief gives you a finished
+            Most tools hand you a blank editor or a dashboard. {PRODUCT_NAME} gives you a finished
             campaign package based on your actual event, audience, goal, and tone.
           </p>
         </div>
@@ -44,7 +45,7 @@ export function WhyDifferent() {
           </div>
 
           <div className="rounded-2xl border border-primary/30 bg-card p-6 ring-1 ring-primary/10 sm:p-8">
-            <p className="font-heading text-lg font-semibold text-foreground">CauseBrief gives you</p>
+            <p className="font-heading text-lg font-semibold text-foreground">{PRODUCT_NAME} gives you</p>
             <ul className="mt-5 space-y-3">
               {withKit.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-foreground">
