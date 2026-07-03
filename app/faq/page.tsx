@@ -10,7 +10,7 @@ import { KIT_PRICE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'FAQ',
-  description: 'Common questions about CampaignKit — pricing, delivery, scope, and what is included.'
+  description: 'Common questions about CauseBrief — pricing, delivery, scope, and what is included.'
 };
 
 export default function FaqPage() {

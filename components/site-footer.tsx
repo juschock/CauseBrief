@@ -19,7 +19,7 @@ export function SiteFooter() {
                 C
               </span>
               <span className="font-heading text-lg font-semibold text-foreground">
-                CampaignKit
+                CauseBrief
                 <span className="ml-1.5 text-xs font-normal text-muted-foreground">by Racoben</span>
               </span>
             </div>
@@ -65,7 +65,7 @@ export function SiteFooter() {
 
         <div className="mt-10 border-t border-border pt-6">
           <p className="text-xs leading-relaxed text-muted-foreground">
-            CampaignKit provides campaign copy and planning materials. It does not include custom
+            CauseBrief provides campaign copy and planning materials. It does not include custom
             graphic design, ad buying, email sending, social media posting, list management, or
             guaranteed campaign results.
           </p>

@@ -122,7 +122,7 @@ export function BriefForm() {
     }
 
     const body = encodeURIComponent(formatBriefForEmail(data));
-    const subject = encodeURIComponent(`CampaignKit Brief — ${data.campaignName}`);
+    const subject = encodeURIComponent(`CauseBrief Brief — ${data.campaignName}`);
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     window.location.href = `mailto:${INTAKE_EMAIL}?subject=${subject}&body=${body}`;
@@ -141,13 +141,13 @@ export function BriefForm() {
           {data.campaignName ? (
             <>
               If your email app opened, send the message to complete your submission. We&apos;ll review the details for{' '}
-              <span className="font-medium text-foreground">{data.campaignName}</span> and prepare your CampaignKit for
+              <span className="font-medium text-foreground">{data.campaignName}</span> and prepare your CauseBrief campaign package for
               delivery within 48 hours.
             </>
           ) : (
             <>
               If your email app opened, send the message to complete your submission. We&apos;ll review the details and
-              prepare your CampaignKit for delivery within 48 hours.
+              prepare your CauseBrief campaign package for delivery within 48 hours.
             </>
           )}
         </p>
@@ -367,12 +367,12 @@ export function BriefForm() {
             value={data.additionalNotes}
             onChange={(e) => update('additionalNotes', e.target.value)}
             rows={3}
-            placeholder="Anything else we should know before preparing the kit?"
+            placeholder="Anything else we should know before preparing the package?"
             className={fieldClass}
           />
         </Field>
 
-        <Field label="Delivery Email" htmlFor="deliveryEmail" required hint="Where should we send the finished kit?">
+        <Field label="Delivery Email" htmlFor="deliveryEmail" required hint="Where should we send the finished package?">
           <input
             id="deliveryEmail"
             type="email"

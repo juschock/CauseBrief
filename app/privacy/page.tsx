@@ -13,11 +13,11 @@ export default function PrivacyPage() {
           <h1 className="font-heading text-3xl font-semibold text-foreground">Privacy</h1>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>
-              CampaignKit V1 does not use accounts or a customer-facing database. When you submit a campaign brief via
+              CauseBrief V1 does not use accounts or a customer-facing database. When you submit a campaign brief via
               email, your information is handled through your email provider and Racoben&apos;s manual fulfillment process.
             </p>
             <p>
-              We use brief information only to produce and deliver your campaign kit. Do not include passwords or
+              We use brief information only to produce and deliver your campaign package. Do not include passwords or
               payment card numbers in the brief form.
             </p>
             <p>This page should be updated if analytics, payment, or form providers are added later.</p>

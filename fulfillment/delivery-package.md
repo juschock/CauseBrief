@@ -1,7 +1,7 @@
 # Delivery package structure
 
 ```text
-CampaignKit_[CampaignName]/
+CauseBrief_[CampaignName]/
 ├── README_How_to_Use.txt
 ├── 01_Email_Sequence.docx
 ├── 02_Social_Posts.docx
@@ -29,4 +29,4 @@ Email to customer includes:
 - ZIP download link (or attachment under size limits)
 - Optional Google Doc folder link
 - Reminder to verify dates/prices before publishing
-- Support contact: campaignkit@racoben.com
+- Support contact: causebrief@racoben.com

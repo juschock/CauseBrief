@@ -24,7 +24,7 @@ export function Problem() {
               whoever has time.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              CampaignKit gives you a polished starting package built around your actual campaign.
+              CauseBrief gives you a polished starting package built around your actual campaign.
             </p>
           </div>
 

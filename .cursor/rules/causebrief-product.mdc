@@ -1,0 +1,62 @@
+# CauseBrief product rules
+
+CauseBrief is Product 2 in the Racoben Engineering portfolio. ShipCheck is Product 1.
+
+## Brand and routes
+
+- Product name: **CauseBrief** (never CampaignKit in customer-facing copy)
+- Route: `/causebrief`
+- Intake email: `causebrief@racoben.com`
+- Tagline: "One brief. A complete campaign package."
+
+## Customer-facing scope (V1)
+
+- Structured brief → polished human-reviewed campaign package
+- Mailto intake — no DB, auth, payment, or customer dashboard
+- Preserve the v0 UI: warm cream/terracotta palette, Fraunces/Geist, section layout, hero imagery, shadcn/Tailwind styling
+- Do not re-scaffold or simplify the UI
+
+## Internal production model
+
+Customer-facing: structured brief → polished human-reviewed campaign package
+
+Internal pipeline:
+
+```text
+intake normalization → fact ledger → campaign-type selection → internal AI drafting
+→ channel adaptation → AI critique pass → AI polish pass → deterministic QA
+→ editor packet → Rachel review → package assembly → delivery
+```
+
+- Josh + ChatGPT + custom AI tooling draft/adapt/critique/polish/package
+- Rachel is the **final expert quality gate**, not the first drafter
+
+## Hard rules
+
+- **AI is internal only.** Never customer-facing AI, chat, prompts, or model settings.
+- **Fact ledger only.** AI must not invent sponsors, donation matches, statistics, quotes, links, partners, deadlines, outcomes, or claims.
+- **Human review required** before every delivery.
+
+## Do not add (V1)
+
+- customer-facing AI
+- chat or prompt interfaces
+- auth / database / payment integration
+- customer dashboard or automated delivery portal
+- email sending platform or social posting automation
+- analytics that stores personal/project data
+
+## Key files
+
+- `lib/site.ts` — brand constants, basePath prefix, intake email
+- `lib/intake.ts` — brief form schema and mailto formatting
+- `docs/backend-development-philosophy.md` — product philosophy
+- `docs/internal-automation-pipeline.md` — staff production workflow
+- `docs/fact-ledger.md` — single source of truth for AI drafting
+- `docs/editor-packet.md` — Rachel review bundle spec
+- `fulfillment/` — pipeline, QA, delivery, internal prompts
+
+## Deploy
+
+- Standalone Vercel project with `basePath: '/causebrief'`
+- Parent Racoben site rewrites `/causebrief` and `/causebrief/*` via `CAUSEBRIEF_PRODUCTION_URL` (no path suffix in env var)

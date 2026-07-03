@@ -1,10 +1,10 @@
 export const PARENT_BRAND = 'Racoben Engineering';
-export const PRODUCT_NAME = 'CampaignKit';
-export const TAGLINE = 'One short brief. A complete, ready-to-use marketing kit.';
+export const PRODUCT_NAME = 'CauseBrief';
+export const TAGLINE = 'One brief. A complete campaign package.';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN ?? 'https://racoben.com';
-export const PUBLIC_PREFIX = '/campaignkit';
+export const PUBLIC_PREFIX = '/causebrief';
 export const KIT_PRICE = '$99';
-export const INTAKE_EMAIL = process.env.NEXT_PUBLIC_CAMPAIGNKIT_EMAIL ?? 'campaignkit@racoben.com';
+export const INTAKE_EMAIL = process.env.NEXT_PUBLIC_CAUSEBRIEF_EMAIL ?? 'causebrief@racoben.com';
 
 export function productPath(path: string = '/') {
   if (path === '/') return '/';

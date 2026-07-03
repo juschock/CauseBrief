@@ -99,7 +99,7 @@ export const deliverables = [
   },
   {
     title: 'Human Review',
-    summary: 'Every kit is prepared and reviewed by Racoben before delivery for clarity, tone, accuracy, and usability.'
+    summary: 'Every package is prepared and reviewed by Racoben before delivery for clarity, tone, accuracy, and usability.'
   }
 ];
 
@@ -141,10 +141,10 @@ export const kitUses = [
 ];
 
 export const faqs = [
-  { q: 'Is this a subscription?', a: 'No. V1 is a fixed-price campaign kit.' },
+  { q: 'Is this a subscription?', a: 'No. V1 is a fixed-price campaign package.' },
   {
     q: 'Do you send the emails or post on social media?',
-    a: 'No. CampaignKit provides the materials. You publish, send, print, or post them using your own tools and accounts.'
+    a: 'No. CauseBrief provides the materials. You publish, send, print, or post them using your own tools and accounts.'
   },
   {
     q: 'Do I need a website?',
@@ -154,7 +154,7 @@ export const faqs = [
     q: 'Do you design graphics?',
     a: 'V1 includes flyer copy and graphics suggestions, not custom graphic design. You can use the copy in Canva, a flyer template, or with your designer.'
   },
-  { q: 'Can I edit the materials?', a: 'Yes. The kit is delivered in editable formats.' },
+  { q: 'Can I edit the materials?', a: 'Yes. The package is delivered in editable formats.' },
   { q: 'How fast is delivery?', a: 'Within 48 hours after receiving a complete campaign brief.' },
   {
     q: 'What if my campaign is urgent?',
@@ -166,11 +166,11 @@ export const faqs = [
   },
   {
     q: 'Can nonprofits use this?',
-    a: 'Yes. CampaignKit is especially useful for fundraisers, donor appeals, adoption events, volunteer drives, galas, local charity events, and community campaigns.'
+    a: 'Yes. CauseBrief is especially useful for fundraisers, donor appeals, adoption events, volunteer drives, galas, local charity events, and community campaigns.'
   },
   {
     q: 'Is this legal, fundraising, or advertising advice?',
-    a: 'No. CampaignKit provides campaign copy and planning materials. It is not legal, fundraising compliance, tax, or advertising advice.'
+    a: 'No. CauseBrief provides campaign copy and planning materials. It is not legal, fundraising compliance, tax, or advertising advice.'
   },
   {
     q: 'Can you guarantee results?',

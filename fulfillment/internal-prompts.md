@@ -2,7 +2,7 @@
 
 ## Base prompt
 
-You are an experienced marketer for small nonprofits, local businesses, and community events. Create a complete $99 Campaign Kit based on the brief below.
+You are an experienced marketer for small nonprofits, local businesses, and community events. Create a complete $99 CauseBrief campaign package based on the **fact ledger** below.
 
 Output sections:
 - 3-email sequence (with subject lines)
@@ -15,17 +15,28 @@ Output sections:
 - Suggested posting schedule (2 weeks)
 
 Rules:
-- Use only facts from the brief
+- Use **only** facts from the fact ledger — never invent sponsors, donation matches, statistics, quotes, links, partners, deadlines, outcomes, or claims
 - Do not invent sponsors, prices, or dates
 - Match requested tone
 - Respect phrases to include/avoid
 
-Brief:
+Fact ledger:
+[PASTE APPROVED FACT LEDGER FROM docs/fact-ledger.md]
+
+Original brief (reference only — ledger is authoritative):
 [PASTE FULL INTAKE]
 
 ## Follow-up prompts
 
 - Shorten social posts for Instagram vs LinkedIn
-- Add urgency only if brief supports it
+- Add urgency only if fact ledger supports it
 - Rewrite CTA block for donation vs ticket vs signup goals
 - Generate alternate subject lines (5 more)
+
+## Critique pass prompt
+
+Review the draft below against the fact ledger. List every unsupported claim, invented fact, tone mismatch, missing channel, and phrase violation. Do not suggest adding facts not in the ledger.
+
+## Polish pass prompt
+
+Apply the critique findings. Improve clarity and flow. Do not add any facts not present in the fact ledger.

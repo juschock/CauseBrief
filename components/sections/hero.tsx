@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Clock, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { publicAsset } from '@/lib/site';
+import { publicAsset, TAGLINE } from '@/lib/site';
 
 export function Hero() {
   return (
@@ -14,11 +14,11 @@ export function Hero() {
           </span>
 
           <h1 className="mt-5 text-balance font-heading text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            One short brief. A complete marketing kit.
+            {TAGLINE}
           </h1>
 
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            CampaignKit prepares a polished kit from the details of your event, fundraiser, promotion, or local
+            CauseBrief prepares a polished campaign package from the details of your event, fundraiser, promotion, or local
             campaign — polished emails, social posts, flyer copy, landing page copy, subject lines, CTAs, and a
             simple posting schedule.
           </p>

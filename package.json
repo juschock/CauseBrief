@@ -1,8 +1,8 @@
 {
-  "name": "racoben-campaignkit",
+  "name": "causebrief",
   "version": "1.0.0",
   "private": true,
-  "description": "CampaignKit by Racoben — productized marketing kit service at racoben.com/campaignkit",
+  "description": "CauseBrief by Racoben — productized campaign package service at racoben.com/causebrief",
   "scripts": {
     "dev": "next dev -p 3102",
     "build": "next build",

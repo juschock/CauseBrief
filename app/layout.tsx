@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: `%s | ${PRODUCT_NAME}`
   },
   description:
-    'CampaignKit prepares a polished marketing kit from one short campaign brief — emails, social posts, landing page copy, flyer copy, press release, subject lines, CTAs, and a posting schedule. Prepared and human-reviewed by Racoben, delivered within 48 hours.',
+    'CauseBrief prepares a polished campaign package from one structured brief — emails, social posts, landing page copy, flyer copy, press release, subject lines, CTAs, and a posting schedule. Prepared and human-reviewed by Racoben, delivered within 48 hours.',
   icons: {
     icon: [
       { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },

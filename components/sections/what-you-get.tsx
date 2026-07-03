@@ -54,7 +54,7 @@ const deliverables = [
   {
     icon: UserCheck,
     title: "Human Review",
-    body: "Every kit is prepared and reviewed by Racoben before delivery for clarity, tone, accuracy, and usability.",
+    body: "Every package is prepared and reviewed by Racoben before delivery for clarity, tone, accuracy, and usability.",
   },
 ]
 

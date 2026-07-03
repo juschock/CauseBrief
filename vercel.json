@@ -5,7 +5,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/campaignkit",
+      "destination": "/causebrief",
       "permanent": false
     }
   ]

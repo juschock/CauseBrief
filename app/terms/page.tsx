@@ -13,7 +13,7 @@ export default function TermsPage() {
           <h1 className="font-heading text-3xl font-semibold text-foreground">Terms</h1>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>
-              CampaignKit provides campaign copy and planning materials. It is not legal, fundraising compliance, tax,
+              CauseBrief provides campaign copy and planning materials. It is not legal, fundraising compliance, tax,
               or advertising advice. Delivery timelines assume a complete brief. Results are not guaranteed.
             </p>
             <p>

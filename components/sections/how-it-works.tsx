@@ -10,18 +10,18 @@ const steps = [
   },
   {
     step: "02",
-    title: "We build your campaign kit",
+    title: "We build your campaign package",
     body: "Racoben turns your brief into a complete package: email, social, landing pages, flyers, press outreach, subject lines, CTAs, and a posting schedule.",
   },
   {
     step: "03",
     title: "You receive a polished package",
-    body: "Within 48 hours, you get an organized, editable kit you can copy, paste, print, publish, or hand off to your team.",
+    body: "Within 48 hours, you get an organized, editable package you can copy, paste, print, publish, or hand off to your team.",
   },
   {
     step: "04",
     title: "You use it where you already work",
-    body: "Use your kit in Mailchimp, Facebook, Instagram, Eventbrite, Givebutter, Canva, Google Docs, your website, or printed materials.",
+    body: "Use your package in Mailchimp, Facebook, Instagram, Eventbrite, Givebutter, Canva, Google Docs, your website, or printed materials.",
   },
 ]
 
@@ -35,7 +35,7 @@ export function HowItWorks() {
               How it works
             </span>
             <h2 className="mt-3 text-balance font-heading text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-              One form in. A complete campaign kit out.
+              One form in. A complete campaign package out.
             </h2>
           </div>
           <Button size="lg" nativeButton={false} render={<Link href="/brief">Start Your Brief</Link>} />

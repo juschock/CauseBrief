@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/campaignkit',
+  basePath: '/causebrief',
   output: 'standalone',
   outputFileTracingRoot: import.meta.dirname,
   images: {
@@ -10,7 +10,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/campaignkit',
+        destination: '/causebrief',
         permanent: false,
         basePath: false
       }

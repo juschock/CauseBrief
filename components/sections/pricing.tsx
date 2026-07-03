@@ -24,7 +24,7 @@ export function Pricing() {
             Pricing
           </span>
           <h2 className="mt-3 text-balance font-heading text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-            One simple price. One complete kit.
+            One simple price. One complete package.
           </h2>
           <p className="mt-3 text-muted-foreground">Introductory V1 price for early customers.</p>
         </div>
@@ -32,7 +32,7 @@ export function Pricing() {
         <div className="mx-auto mt-10 max-w-xl">
           <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
             <div className="border-b border-border bg-secondary/50 p-8 text-center">
-              <p className="font-heading text-lg font-semibold text-foreground">Campaign Kit</p>
+              <p className="font-heading text-lg font-semibold text-foreground">Campaign Package</p>
               <p className="mt-2">
                 <span className="font-heading text-5xl font-semibold text-foreground">$99</span>
                 <span className="ml-2 text-sm text-muted-foreground">one-time</span>
@@ -60,7 +60,7 @@ export function Pricing() {
               />
 
               <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-                CampaignKit provides campaign copy and planning materials. It does not include
+                CauseBrief provides campaign copy and planning materials. It does not include
                 custom graphic design, ad buying, email sending, social media posting, list
                 management, or guaranteed campaign results.
               </p>

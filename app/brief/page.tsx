@@ -7,7 +7,7 @@ import { KIT_PRICE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Start Your Campaign Brief',
-  description: `Tell us about your campaign. We use this brief to prepare your ${KIT_PRICE} Campaign Kit and follow up if anything important is missing.`
+  description: `Tell us about your campaign. We use this brief to prepare your ${KIT_PRICE} campaign package and follow up if anything important is missing.`
 };
 
 export default function BriefPage() {
@@ -22,7 +22,7 @@ export default function BriefPage() {
               Most briefs take 5–10 minutes
             </span>
             <h1 className="mt-5 text-balance font-heading text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-              Start your CampaignKit brief
+              Start your CauseBrief
             </h1>
             <p className="mx-auto mt-3 max-w-xl text-pretty leading-relaxed text-muted-foreground">
               You do not need perfect marketing copy here. Just give us the facts, goals, links, and tone you want us
@@ -30,7 +30,7 @@ export default function BriefPage() {
             </p>
             <p className="mx-auto mt-3 max-w-xl text-pretty leading-relaxed text-muted-foreground">
               Tell us about your campaign. We&apos;ll use this brief to prepare your{' '}
-              <span className="font-medium text-foreground">{KIT_PRICE} Campaign Kit</span> and follow up if anything
+              <span className="font-medium text-foreground">{KIT_PRICE} campaign package</span> and follow up if anything
               important is missing.
             </p>
           </div>

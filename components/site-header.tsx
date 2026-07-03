@@ -25,7 +25,7 @@ export function SiteHeader() {
             C
           </span>
           <span className="font-heading text-lg font-semibold leading-none text-foreground">
-            CampaignKit
+            CauseBrief
             <span className="ml-1.5 text-xs font-normal text-muted-foreground">by Racoben</span>
           </span>
         </Link>

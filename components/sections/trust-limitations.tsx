@@ -12,7 +12,7 @@ export function TrustLimitations() {
             Clear scope. Usable materials. No false promises.
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            CampaignKit helps you prepare campaign copy and planning materials. It does not
+            CauseBrief helps you prepare campaign copy and planning materials. It does not
             guarantee donations, sales, attendance, ticket purchases, press coverage, ad approval,
             or social media reach.
           </p>
