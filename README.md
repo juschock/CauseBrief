@@ -1,6 +1,6 @@
 # CauseBrief
 
-Productized campaign package service by **Racoben Engineering**. Canonical repo: [github.com/juschock/CauseBrief](https://github.com/juschock/CauseBrief) (rename from CampaignKit pending).
+Productized campaign package service by **Racoben Engineering**. Canonical repo: [github.com/juschock/CauseBrief](https://github.com/juschock/CauseBrief).
 
 Live at `racoben.com/causebrief` via the Racoben parent-site Vercel rewrites.
 
