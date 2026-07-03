@@ -6,7 +6,7 @@ export const PRODUCT_NAME = 'CauseBrief';
 /** Internal folder/order prefix (no spaces). Derived from PRODUCT_NAME. */
 export const INTERNAL_ORDER_PREFIX = PRODUCT_NAME.replace(/\s+/g, '');
 
-export const TAGLINE = 'One brief. A complete campaign package.';
+export const TAGLINE = 'One survey. A complete campaign package.';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN ?? 'https://racoben.com';
 
 /** URL path under racoben.com — update alongside PRODUCT_NAME when rebranding. */

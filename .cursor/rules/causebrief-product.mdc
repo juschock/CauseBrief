@@ -7,7 +7,7 @@ CauseBrief is Product 2 in the Racoben Engineering portfolio. ShipCheck is Produ
 - Product name: **`PRODUCT_NAME` in `lib/site.ts`** (currently CauseBrief) — import everywhere; do not hardcode
 - Route: `/causebrief`
 - Intake email: `causebrief@racoben.com`
-- Tagline: "One brief. A complete campaign package."
+- Tagline: "One survey. A complete campaign package."
 
 ## Customer-facing scope (V1)
 
