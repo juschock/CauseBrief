@@ -4,11 +4,11 @@
 
 ```text
 racoben.com/              → juschock/racoben (site/)
-racoben.com/causebrief    → juschock/CauseBrief (proxy rewrite)
+racoben.com/snickerdoodle    → juschock/Snickerdoodle (proxy rewrite)
 racoben.com/shipcheck     → ShipCheck app (proxy rewrite)
 ```
 
-CauseBrief public app constraints (unchanged):
+Snickerdoodle public app constraints (unchanged):
 
 - No auth, no DB, no customer-facing AI, no payment, no customer dashboard
 - Flow: structured brief → polished human-reviewed campaign package
@@ -31,17 +31,17 @@ Studio will hold:
 - Rachel review queue
 - Revenue and analytics
 
-Isolating it from the public CauseBrief site reduces attack surface, simplifies compliance narrative, and allows independent deploy cadence.
+Isolating it from the public Snickerdoodle site reduces attack surface, simplifies compliance narrative, and allows independent deploy cadence.
 
 ### Password-protected route on public site?
 
 **Prototype only** — acceptable on a temp Vercel URL with Vercel Authentication or basic auth.
 
-**Not recommended for production:** `racoben.com/causebrief/studio`
+**Not recommended for production:** `racoben.com/snickerdoodle/studio`
 
 ### Parent domain ownership
 
-`racoben.com` stays on the **Racoben parent** Vercel project. Product paths proxy to product origins via rewrites + env vars (same pattern as CauseBrief today).
+`racoben.com` stays on the **Racoben parent** Vercel project. Product paths proxy to product origins via rewrites + env vars (same pattern as Snickerdoodle today).
 
 Studio gets its **own subdomain** (`studio.racoben.com`) pointing directly to the RacobenStudio Vercel project — not a path rewrite on the parent.
 
@@ -56,7 +56,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 STUDIO_INTAKE_API_SECRET=         # validates public brief submissions
 ```
 
-CauseBrief public project (Phase 2 intake):
+Snickerdoodle public project (Phase 2 intake):
 
 ```text
 STUDIO_INTAKE_URL=https://studio.racoben.com/api/intake
@@ -65,7 +65,7 @@ STUDIO_INTAKE_API_SECRET=         # shared secret, server-side only
 
 ## Connectivity summary
 
-| Phase | Public CauseBrief | Studio |
+| Phase | Public Snickerdoodle | Studio |
 |-------|-------------------|--------|
 | V1 (now) | Mailto intake | Manual / spreadsheets / fulfillment docs |
 | V2 | Server action or API route POSTs to Studio | Creates account → campaign → order |

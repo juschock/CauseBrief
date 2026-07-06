@@ -1,4 +1,19 @@
-import { KIT_PRICE, PRODUCT_NAME } from '@/lib/site';
+import { KIT_PRICE, PACKAGE_LABEL, PRODUCT_NAME } from '@/lib/site';
+
+export const organizationTypes = [
+  'Nonprofit / Community organization',
+  'Local business',
+  'Service business',
+  'Event organizer',
+  'Other'
+] as const;
+
+export const campaignFamilies = [
+  'Cause / Nonprofit campaign',
+  'Local customer acquisition',
+  'Booking / Reservation campaign',
+  'Not sure yet'
+] as const;
 
 export const campaignTypes = [
   'Fundraiser',
@@ -12,6 +27,9 @@ export const campaignTypes = [
   'Product Launch',
   'Local Promotion',
   'Volunteer Drive',
+  'Seasonal Promotion',
+  'Grand Opening',
+  'Booking / Appointment Push',
   'Other'
 ] as const;
 
@@ -39,6 +57,9 @@ export const channelOptions = [
 ] as const;
 
 export type BriefFormData = {
+  organizationType: string;
+  campaignFamily: string;
+  primaryAction: string;
   organizationName: string;
   campaignName: string;
   campaignType: string;
@@ -60,6 +81,9 @@ export type BriefFormData = {
 };
 
 export const emptyBrief: BriefFormData = {
+  organizationType: organizationTypes[0],
+  campaignFamily: campaignFamilies[0],
+  primaryAction: '',
   organizationName: '',
   campaignName: '',
   campaignType: campaignTypes[0],
@@ -84,7 +108,11 @@ export function formatBriefForEmail(data: BriefFormData) {
   const type = data.campaignType === 'Other' ? data.campaignTypeOther : data.campaignType;
   const tone = data.tone === 'Other' ? data.toneOther : data.tone;
   return [
-    `${PRODUCT_NAME} ${KIT_PRICE} Campaign Package — New Brief`,
+    `${PRODUCT_NAME} ${KIT_PRICE} ${PACKAGE_LABEL} — New Survey`,
+    '',
+    `Organization Type: ${data.organizationType}`,
+    `Campaign Family: ${data.campaignFamily}`,
+    `Primary Action: ${data.primaryAction}`,
     '',
     `Organization: ${data.organizationName}`,
     `Campaign / Event: ${data.campaignName}`,

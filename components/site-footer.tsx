@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { SnickerdoodleMark } from "@/components/snickerdoodle-mark"
 import { PRODUCT_EXCLUSIONS_DISCLAIMER, PRODUCT_NAME } from "@/lib/site"
 
 const footerLinks = [
@@ -15,9 +16,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
-            <div className="flex items-center gap-2">
-              <span className="flex size-8 items-center justify-center rounded-lg bg-primary font-heading text-base font-semibold text-primary-foreground">
-                {PRODUCT_NAME.charAt(0)}
+            <div className="flex items-center gap-2.5">
+              <span className="flex size-8 items-center justify-center rounded-lg bg-secondary/80 ring-1 ring-border/60">
+                <SnickerdoodleMark className="size-5" />
               </span>
               <span className="font-heading text-lg font-semibold text-foreground">
                 {PRODUCT_NAME}
@@ -53,7 +54,7 @@ export function SiteFooter() {
               href="/brief"
               className="text-sm text-foreground transition-colors hover:text-primary"
             >
-              Start Your Campaign Brief
+              Start Your Campaign Survey
             </Link>
             <Link
               href="/#what-you-get"

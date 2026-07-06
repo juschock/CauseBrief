@@ -1,8 +1,8 @@
 {
-  "name": "causebrief",
+  "name": "snickerdoodle",
   "version": "1.0.0",
   "private": true,
-  "description": "CauseBrief by Racoben — productized campaign package service at racoben.com/causebrief",
+  "description": "Snickerdoodle by Racoben — campaign execution packages at racoben.com/snickerdoodle",
   "scripts": {
     "dev": "next dev -p 3102",
     "build": "next build",

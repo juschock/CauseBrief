@@ -2,7 +2,7 @@
 
 ## Base prompt
 
-You are an experienced marketer for small nonprofits, local businesses, and community events. Create a complete $99 CauseBrief campaign package based on the **fact ledger** below.
+You are an experienced marketer for small nonprofits, local businesses, and community events. Create a complete $99 Snickerdoodle campaign package based on the **fact ledger** below.
 
 Output sections:
 - 3-email sequence (with subject lines)

@@ -157,18 +157,18 @@ export const faqs = [
     a: 'V1 includes flyer copy and graphics suggestions, not custom graphic design. You can use the copy in Canva, a flyer template, or with your designer.'
   },
   { q: 'Can I edit the materials?', a: 'Yes. The package is delivered in editable formats.' },
-  { q: 'How fast is delivery?', a: 'Within 48 hours after receiving a complete campaign brief.' },
+  { q: 'How fast is delivery?', a: 'Within 48 hours after receiving a complete campaign survey.' },
   {
     q: 'What if my campaign is urgent?',
-    a: 'If your deadline is very soon, include that in the brief. Rush delivery may be offered later, but V1 delivery is within 48 hours.'
+    a: 'If your deadline is very soon, include that in the survey. Rush delivery may be offered later, but V1 delivery is within 48 hours.'
   },
   {
     q: 'What if I do not know what channels I need?',
     a: 'Select the ones you already use. If you are unsure, choose Email, Facebook, Instagram, Flyer/Print, and Landing Page/Event Page as a general starter set.'
   },
   {
-    q: 'Can nonprofits use this?',
-    a: `Yes. ${PRODUCT_NAME} is especially useful for fundraisers, donor appeals, adoption events, volunteer drives, galas, local charity events, and community campaigns.`
+    q: 'Who is this for?',
+    a: `Nonprofits, community organizations, local businesses, service businesses, and event organizers. ${PRODUCT_NAME} works for fundraising, adoption events, year-end appeals, grand openings, seasonal promotions, booking campaigns, and more.`
   },
   {
     q: 'Is this legal, fundraising, or advertising advice?',

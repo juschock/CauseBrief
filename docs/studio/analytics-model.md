@@ -1,6 +1,6 @@
 # Analytics model
 
-Three layers. **V1 outcome analytics are manual** — CauseBrief does not send email or publish posts, so performance data comes from client reports unless integrations are added later.
+Three layers. **V1 outcome analytics are manual** — Snickerdoodle does not send email or publish posts, so performance data comes from client reports unless integrations are added later.
 
 ## Layer A — Internal operations analytics
 

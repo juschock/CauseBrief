@@ -14,7 +14,7 @@ export default function TermsPage() {
           <h1 className="font-heading text-3xl font-semibold text-foreground">Terms</h1>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>
-              {PRODUCT_LEGAL_DISCLAIMER} Delivery timelines assume a complete brief. Results are not guaranteed.
+              {PRODUCT_LEGAL_DISCLAIMER} Delivery timelines assume a complete survey. Results are not guaranteed.
             </p>
             <p>
               You are responsible for reviewing final details before publishing and for using materials in the platforms

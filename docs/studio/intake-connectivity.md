@@ -1,11 +1,11 @@
 # Intake connectivity
 
-How the public CauseBrief site connects to RacobenStudio.
+How the public Snickerdoodle site connects to RacobenStudio.
 
 ## Phase 1 (current — V1)
 
 ```text
-Customer → /causebrief/brief form → mailto → Josh/Rachel manual fulfillment
+Customer → /snickerdoodle/brief form → mailto → Josh/Rachel manual fulfillment
 ```
 
 No API. No database. No change to public app constraints.
@@ -13,8 +13,8 @@ No API. No database. No change to public app constraints.
 ## Phase 2 (target)
 
 ```text
-Customer → /causebrief/brief form
-         → CauseBrief server route (POST)
+Customer → /snickerdoodle/brief form
+         → Snickerdoodle server route (POST)
          → RacobenStudio POST /api/intake (authenticated via shared secret)
          → Supabase: account, contact, campaign, order, brief, activity event
          → Email notify Josh/Rachel

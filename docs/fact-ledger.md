@@ -1,6 +1,6 @@
 # Fact ledger
 
-The fact ledger is the single source of truth for a CauseBrief order. All internal AI drafting, adaptation, critique, and polish steps must use **only** facts recorded here.
+The fact ledger is the single source of truth for a Snickerdoodle order. All internal AI drafting, adaptation, critique, and polish steps must use **only** facts recorded here.
 
 ## Purpose
 
@@ -15,8 +15,8 @@ Immediately after intake normalization, before any AI drafting.
 ## Ledger template
 
 ```text
-CauseBrief Fact Ledger
-Order: CauseBrief_[EventName]_[YYYYMMDD]
+Snickerdoodle Fact Ledger
+Order: Snickerdoodle_[EventName]_[YYYYMMDD]
 Status: draft | complete | approved
 
 --- Organization ---

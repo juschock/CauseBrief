@@ -1,11 +1,11 @@
-# CauseBrief internal automation pipeline
+# Snickerdoodle internal automation pipeline
 
 Staff-only production workflow. Customers never see this process.
 
 ## Overview
 
 ```text
-Customer brief (mailto / future form)
+Customer survey (mailto / future form)
         ↓
 1. Intake normalization
         ↓
@@ -38,13 +38,13 @@ Customer brief (mailto / future form)
 
 - Parse email or form submission into structured fields.
 - Flag missing required fields before production starts.
-- Create internal folder: `CauseBrief_[EventName]_[YYYYMMDD]`.
+- Create internal folder: `Snickerdoodle_[EventName]_[YYYYMMDD]`.
 
 ### 2. Fact ledger
 
-- Extract only verified facts from the brief into a single source of truth.
+- Extract only verified facts from the survey into a single source of truth.
 - See `docs/fact-ledger.md`.
-- All downstream AI steps must reference the ledger, not the raw brief alone.
+- All downstream AI steps must reference the ledger, not the raw survey alone.
 
 ### 3. Campaign-type selection
 

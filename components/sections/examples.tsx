@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PRODUCT_NAME } from '@/lib/site';
 
 const examples = [
@@ -61,6 +62,15 @@ export function Examples() {
             </article>
           ))}
         </div>
+
+        <p className="mt-10">
+          <Link
+            href="/samples"
+            className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+          >
+            View full sample campaign packages →
+          </Link>
+        </p>
       </div>
     </section>
   )

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/causebrief',
+  basePath: '/snickerdoodle',
   output: 'standalone',
   outputFileTracingRoot: import.meta.dirname,
   images: {
@@ -10,7 +10,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/causebrief',
+        destination: '/snickerdoodle',
         permanent: false,
         basePath: false
       }

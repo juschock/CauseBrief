@@ -1,9 +1,9 @@
-# CauseBrief fulfillment pipeline (internal)
+# Snickerdoodle fulfillment pipeline (internal)
 
-1. **Intake received** — Email or future form submission creates a ticket folder: `CauseBrief_[EventName]_[YYYYMMDD]`.
+1. **Intake received** — Email or future form submission creates a ticket folder: `Snickerdoodle_[EventName]_[YYYYMMDD]`.
 2. **Intake normalization** — Parse submission into structured fields; flag missing info before starting.
 3. **Fact ledger** — Build approved fact ledger per `docs/fact-ledger.md`. All AI steps use ledger only.
-4. **Brief completeness check** — Verify dates, location, audience, goal, offer, tone, channels, delivery email.
+4. **Survey completeness check** — Verify dates, location, audience, goal, offer, tone, channels, delivery email.
 5. **Campaign type mapping** — Select template pack from `templates/` (fundraiser, local-event, adoption-drive, etc.).
 6. **Internal drafting** — Josh + ChatGPT + custom tooling per `fulfillment/internal-prompts.md`. Customer never sees this step.
 7. **Channel adaptation** — Adapt copy for each requested channel.
@@ -12,7 +12,7 @@
 10. **Deterministic QA** — Run `fulfillment/qa-checklist.md`.
 11. **Editor packet** — Assemble Rachel review bundle per `docs/editor-packet.md`.
 12. **Rachel review** — Final expert quality gate before packaging.
-13. **Package & deliver** — Assemble ZIP + optional Google Doc link per `fulfillment/delivery-package.md`. Confirm 48-hour SLA from complete brief.
+13. **Package & deliver** — Assemble ZIP + optional Google Doc link per `fulfillment/delivery-package.md`. Confirm 48-hour SLA from complete survey.
 
 See also: `docs/internal-automation-pipeline.md`
 

@@ -1,17 +1,18 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { SURVEY_CTA } from "@/lib/site"
 
 const steps = [
   {
     step: "01",
-    title: "Fill out one brief",
+    title: "Fill out one survey",
     body: "Tell us what you are promoting, who it is for, when it happens, and what you want people to do.",
     meta: "Takes about 10 minutes.",
   },
   {
     step: "02",
-    title: "We build your campaign package",
-    body: "Racoben turns your brief into a complete package: email, social, landing pages, flyers, press outreach, subject lines, CTAs, and a posting schedule.",
+    title: "We build your campaign execution package",
+    body: "Racoben turns your survey into a complete package: email, social, landing pages, flyers, press outreach, subject lines, CTAs, and a posting schedule.",
   },
   {
     step: "03",
@@ -35,10 +36,10 @@ export function HowItWorks() {
               How it works
             </span>
             <h2 className="mt-3 text-balance font-heading text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-              One form in. A complete campaign package out.
+              One survey in. A complete campaign execution package out.
             </h2>
           </div>
-          <Button size="lg" nativeButton={false} render={<Link href="/brief">Start Your Brief</Link>} />
+          <Button size="lg" nativeButton={false} render={<Link href="/brief">{SURVEY_CTA}</Link>} />
         </div>
 
         <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">

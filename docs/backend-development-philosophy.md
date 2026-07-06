@@ -1,6 +1,6 @@
-# CauseBrief Backend Development Philosophy
+# Snickerdoodle Backend Development Philosophy
 
-CauseBrief is a productized service first, not a full SaaS product.
+Snickerdoodle is a productized service first, not a full SaaS product.
 
 The purpose of the backend work is to support fast, high-quality, human-reviewed fulfillment of campaign packages while keeping the customer-facing experience simple and trustworthy.
 
@@ -14,7 +14,7 @@ Start by doing the work manually so we can sell and learn quickly. Only automate
 
 The customer should see a clean, simple flow:
 
-1. Fill out a structured campaign brief.
+1. Fill out a structured campaign survey.
 2. Submit the campaign details.
 3. Receive a polished, human-reviewed campaign package.
 
@@ -28,7 +28,7 @@ The customer should not see:
 - customer-facing AI claims
 - automated output with no review step
 
-CauseBrief is not positioned as an AI writing tool. It is positioned as a polished campaign-package service by Racoben.
+Snickerdoodle is not positioned as an AI writing tool. It is positioned as a polished campaign-package service by Racoben.
 
 ## Internal Production Model
 
@@ -73,7 +73,7 @@ AI must use only facts in the fact ledger. No invented sponsors, donation matche
 
 For V1, “backend” primarily means the internal production workflow, not a traditional SaaS backend.
 
-Over time, internal tooling should live in a **separate, access-controlled system** that only CauseBrief fulfillment staff can reach — not in the public customer app. That internal system may include:
+Over time, internal tooling should live in a **separate, access-controlled system** that only Snickerdoodle fulfillment staff can reach — not in the public customer app. That internal system may include:
 
 - form submission handling
 - intake normalization
@@ -259,7 +259,7 @@ Do not build early:
 - marketing analytics platform
 - analytics that stores personal/project data
 
-CauseBrief V1 should sell the outcome, not the software.
+Snickerdoodle V1 should sell the outcome, not the software.
 
 ## V1 Backend Goal
 
@@ -283,7 +283,7 @@ The first business milestone is:
 
 ## Guiding Sentence
 
-CauseBrief should begin as a high-quality, human-reviewed productized service with internal AI-assisted fulfillment, then gradually evolve into software only where automation clearly improves speed, consistency, or margin.
+Snickerdoodle should begin as a high-quality, human-reviewed productized service with internal AI-assisted fulfillment, then gradually evolve into software only where automation clearly improves speed, consistency, or margin.
 
 ## Related internal docs
 

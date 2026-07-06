@@ -1,10 +1,10 @@
 # RacobenStudio — design docs
 
-These documents describe **RacobenStudio**, the staff-only internal operations backend for CauseBrief (and eventually other Racoben products).
+These documents describe **RacobenStudio**, the staff-only internal operations backend for Snickerdoodle (and eventually other Racoben products).
 
-**Implementation repo (planned):** [juschock/RacobenStudio](https://github.com/juschock/RacobenStudio) — separate from [juschock/CauseBrief](https://github.com/juschock/CauseBrief).
+**Implementation repo (planned):** [juschock/RacobenStudio](https://github.com/juschock/RacobenStudio) — separate from [juschock/Snickerdoodle](https://github.com/juschock/Snickerdoodle).
 
-Design-only for now. Do not implement in the public CauseBrief app.
+Design-only for now. Do not implement in the public Snickerdoodle app.
 
 | Doc | Purpose |
 |-----|---------|

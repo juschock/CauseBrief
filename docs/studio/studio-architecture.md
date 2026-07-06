@@ -6,24 +6,24 @@ RacobenStudio is a **staff-only internal operations backend** — not a customer
 
 ```text
 juschock/racoben          → racoben.com (parent site, rewrites only)
-juschock/CauseBrief       → racoben.com/causebrief (public marketing + intake)
+juschock/Snickerdoodle       → racoben.com/snickerdoodle (public marketing + intake)
 juschock/ShipCheck        → racoben.com/shipcheck (public product, when split)
 juschock/RacobenStudio    → studio.racoben.com (internal ops — this system)
 ```
 
-CauseBrief and RacobenStudio are **separate repos, separate Vercel projects, separate deployments**.
+Snickerdoodle and RacobenStudio are **separate repos, separate Vercel projects, separate deployments**.
 
 ## Customer-facing vs internal
 
-| | CauseBrief (public) | RacobenStudio (internal) |
+| | Snickerdoodle (public) | RacobenStudio (internal) |
 |---|---|---|
-| URL | `racoben.com/causebrief` | `studio.racoben.com` (or temp Vercel URL) |
+| URL | `racoben.com/snickerdoodle` | `studio.racoben.com` (or temp Vercel URL) |
 | Auth | None | Staff login required |
 | Database | None in V1 | Yes (Supabase Postgres) |
 | AI | Never customer-facing | Internal drafting/critique/polish only |
 | Audience | Prospects & customers | Josh, Rachel, future ops staff |
 
-**Do not** mount Studio at `racoben.com/causebrief/studio`. It couples public marketing to sensitive operational data.
+**Do not** mount Studio at `racoben.com/snickerdoodle/studio`. It couples public marketing to sensitive operational data.
 
 ## What Studio manages
 

@@ -5,7 +5,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/causebrief",
+      "destination": "/snickerdoodle",
       "permanent": false
     }
   ]

@@ -1,31 +1,32 @@
-# CauseBrief product rules
+# Snickerdoodle product rules
 
-CauseBrief is Product 2 in the Racoben Engineering portfolio. ShipCheck is Product 1.
+Snickerdoodle is Product 2 in the Racoben Engineering portfolio. ShipCheck is Product 1.
 
 ## Brand and routes
 
-- Product name: **`PRODUCT_NAME` in `lib/site.ts`** (currently CauseBrief) — import everywhere; do not hardcode
-- Route: `/causebrief`
-- Intake email: `causebrief@racoben.com`
+- Product name: **`PRODUCT_NAME` in `lib/site.ts`** (currently Snickerdoodle) — import everywhere; do not hardcode
+- Route: `/snickerdoodle`
+- Intake email: `snickerdoodle@racoben.com`
 - Tagline: "One survey. A complete campaign package."
+
+## What we sell
+
+Campaign execution packages — not marketing, copy, AI, or templates.
+
+Every package moves one audience toward one clearly defined action.
 
 ## Customer-facing scope (V1)
 
-- Structured brief → polished human-reviewed campaign package
+- Campaign survey → polished human-reviewed campaign execution package
 - Mailto intake — no DB, auth, payment, or customer dashboard
 - Preserve the v0 UI: warm cream/terracotta palette, Fraunces/Geist, section layout, hero imagery, shadcn/Tailwind styling
 - Do not re-scaffold or simplify the UI
 
 ## Internal production model
 
-Customer-facing: structured brief → polished human-reviewed campaign package
-
-Internal pipeline:
-
 ```text
-intake normalization → fact ledger → campaign-type selection → internal AI drafting
-→ channel adaptation → AI critique pass → AI polish pass → deterministic QA
-→ editor packet → Rachel review → package assembly → delivery
+Survey → campaign family → desired action → fact ledger → campaign strategy
+→ asset map → draft → critique → polish → QA → Rachel review → package
 ```
 
 - Josh + ChatGPT + custom AI tooling draft/adapt/critique/polish/package
@@ -45,12 +46,14 @@ intake normalization → fact ledger → campaign-type selection → internal AI
 - customer dashboard or automated delivery portal
 - email sending platform or social posting automation
 - analytics that stores personal/project data
+- RacobenStudio implementation in this repo
 
 ## Key files
 
 - `lib/site.ts` — brand constants, basePath prefix, intake email
-- `lib/intake.ts` — brief form schema and mailto formatting
-- `docs/backend-development-philosophy.md` — product philosophy
+- `lib/intake.ts` — survey form schema and mailto formatting
+- `docs/operating-doctrine.md` — product philosophy
+- `docs/campaign-families.md` — launch campaign families
 - `docs/internal-automation-pipeline.md` — staff production workflow
 - `docs/fact-ledger.md` — single source of truth for AI drafting
 - `docs/editor-packet.md` — Rachel review bundle spec
@@ -58,5 +61,5 @@ intake normalization → fact ledger → campaign-type selection → internal AI
 
 ## Deploy
 
-- Standalone Vercel project with `basePath: '/causebrief'`
-- Parent Racoben site rewrites `/causebrief` and `/causebrief/*` via `CAUSEBRIEF_PRODUCTION_URL` (no path suffix in env var)
+- Standalone Vercel project with `basePath: '/snickerdoodle'`
+- Parent Racoben site rewrites `/snickerdoodle` and `/snickerdoodle/*` via `SNICKERDOODLE_PRODUCTION_URL` (no path suffix in env var)

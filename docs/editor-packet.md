@@ -13,7 +13,7 @@ After deterministic QA passes and before package assembly.
 ## Packet contents
 
 ```text
-CauseBrief_EditorPacket_[EventName]_[YYYYMMDD]/
+Snickerdoodle_EditorPacket_[EventName]_[YYYYMMDD]/
 ├── 00_Fact_Ledger.md          — approved fact ledger (see docs/fact-ledger.md)
 ├── 01_Brief_Original.txt      — raw customer submission
 ├── 02_Draft_All_Channels.md   — combined draft output

@@ -24,7 +24,7 @@ Account (client organization)
 
 ## Accounts
 
-Client organizations CauseBrief serves.
+Client organizations Snickerdoodle serves.
 
 | Field | Notes |
 |-------|-------|
@@ -93,7 +93,7 @@ A **specific paid kit/deliverable** within a campaign.
 
 ## Fact ledgers
 
-Single source of truth before AI drafting. See CauseBrief `docs/fact-ledger.md`.
+Single source of truth before AI drafting. See Snickerdoodle `docs/fact-ledger.md`.
 
 | Field | Notes |
 |-------|-------|

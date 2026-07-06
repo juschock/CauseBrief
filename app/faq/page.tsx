@@ -6,7 +6,7 @@ import { SiteHeader } from '@/components/site-header';
 import { Button } from '@/components/ui/button';
 import { faqs } from '@/lib/content';
 import { ckPath } from '@/lib/nav';
-import { KIT_PRICE, PRODUCT_NAME } from '@/lib/site';
+import { KIT_PRICE, PRODUCT_NAME, SURVEY_CTA } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'FAQ',
@@ -25,7 +25,7 @@ export default function FaqPage() {
               Frequently asked questions
             </h1>
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-              Everything you need to know before starting your campaign brief.
+              Everything you need to know before starting your campaign survey.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function FaqPage() {
           </div>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button size="lg" nativeButton={false} render={<Link href={ckPath('/brief')}>Start Your Campaign Brief — {KIT_PRICE}</Link>} />
+            <Button size="lg" nativeButton={false} render={<Link href={ckPath('/brief')}>{SURVEY_CTA} — {KIT_PRICE}</Link>} />
             <Button size="lg" variant="outline" nativeButton={false} render={<Link href={ckPath('/')}>Back to home</Link>} />
           </div>
         </div>

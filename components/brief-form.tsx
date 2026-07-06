@@ -6,14 +6,16 @@ import { FormEvent, ReactNode, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   BriefFormData,
+  campaignFamilies,
   campaignTypes,
   channelOptions,
   emptyBrief,
   formatBriefForEmail,
+  organizationTypes,
   toneOptions
 } from '@/lib/intake';
 import { ckPath } from '@/lib/nav';
-import { INTAKE_EMAIL, PRODUCT_NAME } from '@/lib/site';
+import { INTAKE_EMAIL, PACKAGE_LABEL, PRODUCT_NAME } from '@/lib/site';
 
 const fieldClass =
   'w-full rounded-lg border border-input bg-card px-3.5 py-2.5 text-sm text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground/70 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30';
@@ -91,6 +93,7 @@ export function BriefForm() {
     setError('');
 
     const required = [
+      ['primaryAction', 'Primary action'],
       ['organizationName', 'Organization name'],
       ['campaignName', 'Campaign name'],
       ['dateTime', 'Date & time'],
@@ -122,7 +125,7 @@ export function BriefForm() {
     }
 
     const body = encodeURIComponent(formatBriefForEmail(data));
-    const subject = encodeURIComponent(`${PRODUCT_NAME} Brief — ${data.campaignName}`);
+    const subject = encodeURIComponent(`${PRODUCT_NAME} Survey — ${data.campaignName}`);
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     window.location.href = `mailto:${INTAKE_EMAIL}?subject=${subject}&body=${body}`;
@@ -135,19 +138,19 @@ export function BriefForm() {
           <CheckCircle2 className="size-7" />
         </span>
         <h1 className="mt-5 text-balance font-heading text-2xl font-semibold text-foreground sm:text-3xl">
-          Your campaign brief has been received.
+          Your campaign survey has been received.
         </h1>
         <p className="mt-4 leading-relaxed text-muted-foreground">
           {data.campaignName ? (
             <>
               If your email app opened, send the message to complete your submission. We&apos;ll review the details for{' '}
-              <span className="font-medium text-foreground">{data.campaignName}</span> and prepare your {PRODUCT_NAME} campaign package for
+              <span className="font-medium text-foreground">{data.campaignName}</span> and prepare your {PRODUCT_NAME} {PACKAGE_LABEL} for
               delivery within 48 hours.
             </>
           ) : (
             <>
               If your email app opened, send the message to complete your submission. We&apos;ll review the details and
-              prepare your {PRODUCT_NAME} campaign package for delivery within 48 hours.
+              prepare your {PRODUCT_NAME} {PACKAGE_LABEL} for delivery within 48 hours.
             </>
           )}
         </p>
@@ -166,7 +169,52 @@ export function BriefForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-6">
-      <FormSection step="1" title="Campaign basics">
+      <FormSection step="1" title="Campaign survey basics">
+        <Field label="Organization Type" htmlFor="organizationType" required>
+          <select
+            id="organizationType"
+            value={data.organizationType}
+            onChange={(e) => update('organizationType', e.target.value)}
+            className={fieldClass}
+          >
+            {organizationTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+        </Field>
+
+        <Field label="Campaign Family" htmlFor="campaignFamily" required>
+          <select
+            id="campaignFamily"
+            value={data.campaignFamily}
+            onChange={(e) => update('campaignFamily', e.target.value)}
+            className={fieldClass}
+          >
+            {campaignFamilies.map((family) => (
+              <option key={family} value={family}>
+                {family}
+              </option>
+            ))}
+          </select>
+        </Field>
+
+        <Field
+          label="Primary Action"
+          htmlFor="primaryAction"
+          required
+          hint="What should people do? Examples: donate, book, visit, register, call, review, refer."
+        >
+          <input
+            id="primaryAction"
+            value={data.primaryAction}
+            onChange={(e) => update('primaryAction', e.target.value)}
+            placeholder="Book a grooming appointment, donate, attend, visit the store, register"
+            className={fieldClass}
+          />
+        </Field>
+
         <Field label="Organization / Business Name" htmlFor="organizationName" required>
           <input
             id="organizationName"
@@ -390,10 +438,10 @@ export function BriefForm() {
 
       <div className="rounded-2xl border border-border bg-secondary/40 p-6 sm:p-8">
         <Button type="submit" size="lg" className="h-11 w-full text-base">
-          Submit Brief for Review
+          Submit Survey for Review
         </Button>
         <p className="mt-3 text-center text-xs leading-relaxed text-muted-foreground">
-          Submitting opens a prepared email with your campaign brief. No information is stored on this website.
+          Submitting opens a prepared email with your campaign survey. No information is stored on this website.
           We&apos;ll reply with the next step before fulfillment begins. Fields marked with{' '}
           <span className="text-primary">*</span> are required.
         </p>

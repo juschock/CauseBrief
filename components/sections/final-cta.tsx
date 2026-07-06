@@ -1,15 +1,16 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { SURVEY_CTA } from "@/lib/site"
 
 export function FinalCta() {
   return (
     <section className="bg-primary">
       <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 md:py-24">
         <h2 className="text-balance font-heading text-3xl font-semibold leading-tight tracking-tight text-primary-foreground sm:text-4xl">
-          Tell us what you&apos;re promoting. We&apos;ll turn it into a polished campaign package.
+          Tell us what you&apos;re promoting. We&apos;ll turn it into a polished campaign execution package.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-primary-foreground/85">
-          Submit one short brief and receive emails, social posts, landing page copy, flyer copy,
+          Submit one survey and receive emails, social posts, landing page copy, flyer copy,
           press copy, CTAs, and a posting schedule — delivered within 48 hours.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -18,7 +19,7 @@ export function FinalCta() {
             variant="secondary"
             className="h-11 px-6 text-base"
             nativeButton={false}
-            render={<Link href="/brief">Start Your Campaign Brief</Link>}
+            render={<Link href="/brief">{SURVEY_CTA}</Link>}
           />
           <Button
             size="lg"

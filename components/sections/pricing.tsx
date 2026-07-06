@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { PRODUCT_EXCLUSIONS_DISCLAIMER } from "@/lib/site"
+import { PRODUCT_EXCLUSIONS_DISCLAIMER, SURVEY_CTA } from "@/lib/site"
 
 const includes = [
   "3-email sequence",
@@ -33,7 +33,7 @@ export function Pricing() {
         <div className="mx-auto mt-10 max-w-xl">
           <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
             <div className="border-b border-border bg-secondary/50 p-8 text-center">
-              <p className="font-heading text-lg font-semibold text-foreground">Campaign Package</p>
+              <p className="font-heading text-lg font-semibold text-foreground">Campaign Execution Package</p>
               <p className="mt-2">
                 <span className="font-heading text-5xl font-semibold text-foreground">$99</span>
                 <span className="ml-2 text-sm text-muted-foreground">one-time</span>
@@ -57,7 +57,7 @@ export function Pricing() {
                 size="lg"
                 className="mt-8 h-11 w-full text-base"
                 nativeButton={false}
-                render={<Link href="/brief">Start Your Campaign Brief</Link>}
+                render={<Link href="/brief">{SURVEY_CTA}</Link>}
               />
 
               <p className="mt-5 text-xs leading-relaxed text-muted-foreground">

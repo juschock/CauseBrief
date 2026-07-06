@@ -1,11 +1,11 @@
 # RacobenStudio phase plan
 
-Build for the **next 10 orders**, not full SaaS. Do not start Studio until CauseBrief is live on `racoben.com/causebrief` and sample kits exist — unless manual ops becomes unbearable.
+Build for the **next 10 orders**, not full SaaS. Do not start Studio until Snickerdoodle is live on `racoben.com/snickerdoodle` and sample kits exist — unless manual ops becomes unbearable.
 
-## Prerequisites (CauseBrief public)
+## Prerequisites (Snickerdoodle public)
 
-- [ ] `racoben.com/causebrief` proxied and verified
-- [ ] `causebrief@racoben.com` receiving mail
+- [ ] `racoben.com/snickerdoodle` proxied and verified
+- [ ] `snickerdoodle@racoben.com` receiving mail
 - [ ] Two public sample kits published
 - [ ] First paid validation cycle started
 
@@ -70,9 +70,9 @@ Closed
 - Mailchimp / Eventbrite / Givebutter
 - Public brief form → Studio intake API (if not done in Phase 2)
 
-## Public CauseBrief coupling
+## Public Snickerdoodle coupling
 
-| Studio phase | Public CauseBrief change |
+| Studio phase | Public Snickerdoodle change |
 |--------------|--------------------------|
 | 1 | None (mailto continues) |
 | 2 | Optional: POST intake to Studio API |
@@ -80,7 +80,7 @@ Closed
 
 ## Open questions
 
-1. **Repo name:** `RacobenStudio` (portfolio-wide) vs `CauseBriefStudio` (product-specific)?
+1. **Repo name:** `RacobenStudio` (portfolio-wide) vs `SnickerdoodleStudio` (product-specific)?
 2. **Account matching:** Auto-merge by email domain vs manual dedup?
 3. **Campaign auto-create:** Every brief creates new campaign vs prompt staff to link existing?
 4. **Subdomain:** `studio.racoben.com` vs `ops.racoben.com`?

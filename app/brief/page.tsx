@@ -3,11 +3,11 @@ import { Clock } from 'lucide-react';
 import { BriefForm } from '@/components/brief-form';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
-import { KIT_PRICE, PRODUCT_NAME } from '@/lib/site';
+import { KIT_PRICE, PACKAGE_LABEL, PRODUCT_NAME } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Start Your Campaign Brief',
-  description: `Tell us about your campaign. We use this brief to prepare your ${KIT_PRICE} campaign package and follow up if anything important is missing.`
+  title: 'Start Your Campaign Survey',
+  description: `Tell us about your campaign. We use this survey to prepare your ${KIT_PRICE} ${PACKAGE_LABEL} and follow up if anything important is missing.`
 };
 
 export default function BriefPage() {
@@ -19,19 +19,21 @@ export default function BriefPage() {
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
               <Clock className="size-3.5 text-primary" />
-              Most briefs take 5–10 minutes
+              Most surveys take 5–10 minutes
             </span>
             <h1 className="mt-5 text-balance font-heading text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-              Start your {PRODUCT_NAME}
+              Start your {PRODUCT_NAME} campaign survey
             </h1>
             <p className="mx-auto mt-3 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-              You do not need perfect marketing copy here. Just give us the facts, goals, links, and tone you want us
-              to work from.
+              You do not need perfect copy here. Just give us the facts, goals, links, tone, and the action you want
+              people to take.
             </p>
             <p className="mx-auto mt-3 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-              Tell us about your campaign. We&apos;ll use this brief to prepare your{' '}
-              <span className="font-medium text-foreground">{KIT_PRICE} campaign package</span> and follow up if anything
-              important is missing.
+              Tell us about your campaign. We&apos;ll use this survey to prepare your{' '}
+              <span className="font-medium text-foreground">
+                {KIT_PRICE} {PACKAGE_LABEL}
+              </span>{' '}
+              and follow up if anything important is missing.
             </p>
           </div>
 
