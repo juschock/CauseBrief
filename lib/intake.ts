@@ -1,5 +1,7 @@
 import { KIT_PRICE, PACKAGE_LABEL, PRODUCT_NAME } from '@/lib/site';
 
+export { getTemplatesForIntakeFamily, getCampaignTemplate, campaignTemplates } from './campaign-templates';
+
 export const organizationTypes = [
   'Nonprofit / Community organization',
   'Local business',

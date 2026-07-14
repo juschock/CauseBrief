@@ -20,7 +20,8 @@ export default function TermsPage() {
               You are responsible for reviewing final details before publishing and for using materials in the platforms
               and channels available to you.
             </p>
-            <p>These terms should be expanded before scaling paid orders or adding automated checkout.</p>
+            <p>The introductory package price is a one-time $99 USD payment. Fulfillment begins after successful payment and a complete survey.</p>
+            <p>If the survey is incomplete, Racoben may pause the delivery timeline while requesting clarification. Contact snickerdoodle@racoben.com for order or refund questions.</p>
           </div>
         </div>
       </main>
