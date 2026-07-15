@@ -10,7 +10,10 @@ export const runtime = 'nodejs';
 export async function POST(request: Request) {
   try {
     const origin = request.headers.get('origin');
-    const allowedOrigins = new Set([new URL(request.url).origin, new URL(SITE_ORIGIN).origin]);
+    const requestOrigin = new URL(request.url).origin;
+    const configuredOrigin = process.env.NEXT_PUBLIC_SITE_ORIGIN;
+    const checkoutOrigin = configuredOrigin ? new URL(configuredOrigin).origin : requestOrigin;
+    const allowedOrigins = new Set([requestOrigin, new URL(SITE_ORIGIN).origin]);
     if (origin && !allowedOrigins.has(origin)) {
       return NextResponse.json({ error: 'Invalid checkout origin.' }, { status: 403 });
     }
@@ -51,8 +54,8 @@ export async function POST(request: Request) {
       }],
       metadata: { checkout_intent_id: intent.id, offer_id: SNICKERDOODLE_OFFER.id },
       payment_intent_data: { metadata: { checkout_intent_id: intent.id, offer_id: SNICKERDOODLE_OFFER.id } },
-      success_url: `${SITE_ORIGIN}${PUBLIC_PREFIX}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${SITE_ORIGIN}${PUBLIC_PREFIX}/checkout/cancel`,
+      success_url: `${checkoutOrigin}${PUBLIC_PREFIX}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${checkoutOrigin}${PUBLIC_PREFIX}/checkout/cancel`,
       billing_address_collection: 'auto',
       allow_promotion_codes: false
     });
