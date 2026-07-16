@@ -2,13 +2,18 @@
   "name": "snickerdoodle",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22"
+  },
   "description": "Snickerdoodle by Racoben — campaign execution packages at racoben.com/snickerdoodle",
   "scripts": {
     "dev": "next dev -p 3102",
     "build": "next build",
     "start": "next start -p 3102",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "security:secrets": "./scripts/security/scan-secrets.sh --all",
+    "security:secrets:staged": "./scripts/security/scan-secrets.sh --staged"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -16,7 +21,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.511.0",
-    "next": "16.2.6",
+    "next": "16.2.10",
     "react": "^19",
     "react-dom": "^19",
     "shadcn": "^4.8.0",
@@ -29,9 +34,12 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.6",
-    "postcss": "^8.5",
+    "eslint-config-next": "16.2.10",
+    "postcss": "8.5.10",
     "tailwindcss": "^4.2.0",
     "typescript": "5.7.3"
+  },
+  "overrides": {
+    "postcss": "$postcss"
   }
 }
