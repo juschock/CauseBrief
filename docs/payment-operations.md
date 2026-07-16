@@ -38,4 +38,35 @@ Use Stripe test-mode credentials in Preview and Development. Production must use
 
 Code complete: validated Checkout creation, success/cancel UX, signed webhook handling, idempotent transactional persistence, staff handoff, privacy/terms copy, tests, and build verification.
 
-External activation still required: confirm the Racoben Stripe account, configure test credentials and webhook, apply the Studio payment migration, run a test-card checkout through the public proxy, then separately authorize live Stripe credentials and webhook activation.
+Verified in Stripe test mode on July 15, 2026: browser survey submission, server-side Checkout creation, a `$99 USD` test-card payment, signed webhook delivery, idempotent Supabase finalization, and the resulting paid `New Intake` order in Studio. The Studio payment migration is deployed and its staff authorization boundary remains unchanged.
+
+External cutover still required:
+
+1. Finish Stripe account activation and connect the verified Racoben Engineering, LLC payout account.
+2. Create a live-mode webhook endpoint for `https://racoben.com/snickerdoodle/api/stripe/webhook` with `checkout.session.completed` and `checkout.session.async_payment_succeeded` enabled.
+3. Add the live Stripe secret and live webhook signing secret to Vercel Production only. Keep test credentials restricted to Preview/Development.
+4. Merge the checkout pull request only after the production secrets exist, then verify the GitHub-triggered production deployment.
+5. Open a production Checkout Session and confirm it has no test-mode or Sandbox indicator. Do not make a self-payment merely to test live mode.
+6. Rotate the test secret that was used during setup and remove the temporary Preview webhook/bypass configuration.
+
+## Launch-day verification
+
+- Confirm `/snickerdoodle/brief`, Checkout, cancel, success, privacy, and terms pages load through `racoben.com`.
+- Confirm a live Checkout Session contains exactly one `standard_99` item for `$99 USD` and uses the Racoben Stripe account.
+- Confirm the live webhook endpoint is enabled and its most recent deliveries return HTTP 200.
+- Confirm Stripe shows the intended Fulton business checking account for payouts and review the initial payout schedule.
+- Confirm staff can see paid orders in Studio but public/anonymous users cannot query operational tables.
+- Confirm `snickerdoodle@racoben.com` is monitored for fulfillment and refund questions.
+
+## Daily operations and exception handling
+
+- Treat Studio's paid order as the fulfillment trigger. A success-page visit alone is not proof of payment.
+- Reconcile Stripe payments against Studio payment activity daily during launch week, then weekly once stable.
+- For a webhook HTTP 500, fix the underlying database/configuration issue and use Stripe's retry or resend function; idempotency makes resends safe.
+- For an asynchronous payment that remains unpaid, do not start fulfillment until the success event marks it paid.
+- Issue refunds from the Racoben Stripe account, record the reason in the order activity, and update the Studio payment state when a refund workflow is added. Until then, refunds require an explicit manual reconciliation note.
+- Never request card details by email or store them in Studio. Direct customers to Stripe-hosted Checkout.
+
+## Payout expectations
+
+Accepting a successful live payment and receiving a bank payout are separate events. Stripe may hold the first payout while account verification completes, and the bank settlement date depends on the configured payout schedule. Launch readiness means the payment is captured, the webhook is processed, the order is visible to staff, and the payout account is correctly linked; it does not guarantee same-day bank availability.
