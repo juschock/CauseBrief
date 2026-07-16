@@ -7,8 +7,20 @@ import { getSupabaseAdmin } from '@/lib/supabase-admin';
 
 export const runtime = 'nodejs';
 
+const MAX_CHECKOUT_BODY_BYTES = 64 * 1024;
+
 export async function POST(request: Request) {
   try {
+    const contentType = request.headers.get('content-type')?.split(';', 1)[0]?.trim().toLowerCase();
+    if (contentType !== 'application/json') {
+      return NextResponse.json({ error: 'Content-Type must be application/json.' }, { status: 415 });
+    }
+
+    const contentLength = Number(request.headers.get('content-length') ?? '0');
+    if (Number.isFinite(contentLength) && contentLength > MAX_CHECKOUT_BODY_BYTES) {
+      return NextResponse.json({ error: 'Survey payload is too large.' }, { status: 413 });
+    }
+
     const origin = request.headers.get('origin');
     const requestOrigin = new URL(request.url).origin;
     const configuredOrigin = process.env.NEXT_PUBLIC_SITE_ORIGIN;
@@ -18,7 +30,19 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid checkout origin.' }, { status: 403 });
     }
 
-    const parsed = briefCheckoutSchema.safeParse(await request.json());
+    const bodyText = await request.text();
+    if (new TextEncoder().encode(bodyText).byteLength > MAX_CHECKOUT_BODY_BYTES) {
+      return NextResponse.json({ error: 'Survey payload is too large.' }, { status: 413 });
+    }
+
+    let body: unknown;
+    try {
+      body = JSON.parse(bodyText);
+    } catch {
+      return NextResponse.json({ error: 'Invalid JSON.' }, { status: 400 });
+    }
+
+    const parsed = briefCheckoutSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json({ error: parsed.error.issues[0]?.message ?? 'Invalid survey.' }, { status: 400 });
     }
