@@ -14,14 +14,14 @@ export default function PrivacyPage() {
           <h1 className="font-heading text-3xl font-semibold text-foreground">Privacy</h1>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p>
-              {PRODUCT_NAME} V1 does not use accounts or a customer-facing database. When you submit a campaign survey via
-              email, your information is handled through your email provider and Racoben&apos;s manual fulfillment process.
+              {PRODUCT_NAME} stores the campaign survey and contact information you submit so Racoben can process your order,
+              prepare your package, provide support, and maintain business records.
             </p>
             <p>
-              We use survey information only to produce and deliver your campaign execution package. Do not include passwords or
-              payment card numbers in the survey form.
+              Stripe processes checkout and payment information. Racoben does not receive or store your full card number.
+              Do not include passwords, payment card numbers, or other unnecessary sensitive information in the survey form.
             </p>
-            <p>This page should be updated if analytics, payment, or form providers are added later.</p>
+            <p>Order information is available only to authorized fulfillment staff and service providers needed to operate the service.</p>
           </div>
         </div>
       </main>

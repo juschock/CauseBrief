@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { CheckCircle2 } from 'lucide-react';
 import { FormEvent, ReactNode, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -10,12 +9,11 @@ import {
   campaignTypes,
   channelOptions,
   emptyBrief,
-  formatBriefForEmail,
   organizationTypes,
   toneOptions
 } from '@/lib/intake';
-import { ckPath } from '@/lib/nav';
-import { INTAKE_EMAIL, PACKAGE_LABEL, PRODUCT_NAME } from '@/lib/site';
+import { KIT_PRICE } from '@/lib/site';
+import { getTemplatesForIntakeFamily } from '@/lib/campaign-templates';
 
 const fieldClass =
   'w-full rounded-lg border border-input bg-card px-3.5 py-2.5 text-sm text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground/70 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/30';
@@ -73,7 +71,8 @@ function FormSection({
 export function BriefForm() {
   const [data, setData] = useState<BriefFormData>(emptyBrief);
   const [error, setError] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const suggestedTemplates = getTemplatesForIntakeFamily(data.campaignFamily);
 
   function update<K extends keyof BriefFormData>(key: K, value: BriefFormData[K]) {
     setData((current) => ({ ...current, [key]: value }));
@@ -88,7 +87,7 @@ export function BriefForm() {
     }));
   }
 
-  function handleSubmit(event: FormEvent) {
+  async function handleSubmit(event: FormEvent) {
     event.preventDefault();
     setError('');
 
@@ -124,47 +123,20 @@ export function BriefForm() {
       return;
     }
 
-    const body = encodeURIComponent(formatBriefForEmail(data));
-    const subject = encodeURIComponent(`${PRODUCT_NAME} Survey — ${data.campaignName}`);
-    setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    window.location.href = `mailto:${INTAKE_EMAIL}?subject=${subject}&body=${body}`;
-  }
-
-  if (submitted) {
-    return (
-      <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-8 text-center sm:p-10">
-        <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-accent text-accent-foreground">
-          <CheckCircle2 className="size-7" />
-        </span>
-        <h1 className="mt-5 text-balance font-heading text-2xl font-semibold text-foreground sm:text-3xl">
-          Your campaign survey has been received.
-        </h1>
-        <p className="mt-4 leading-relaxed text-muted-foreground">
-          {data.campaignName ? (
-            <>
-              If your email app opened, send the message to complete your submission. We&apos;ll review the details for{' '}
-              <span className="font-medium text-foreground">{data.campaignName}</span> and prepare your {PRODUCT_NAME} {PACKAGE_LABEL} for
-              delivery within 48 hours.
-            </>
-          ) : (
-            <>
-              If your email app opened, send the message to complete your submission. We&apos;ll review the details and
-              prepare your {PRODUCT_NAME} {PACKAGE_LABEL} for delivery within 48 hours.
-            </>
-          )}
-        </p>
-        <p className="mt-4 leading-relaxed text-muted-foreground">
-          If anything important is missing, we&apos;ll contact you at the delivery email you provided.
-        </p>
-        <div className="mt-6 rounded-xl border border-border bg-secondary/40 p-4 text-sm text-foreground">
-          Next step: we&apos;ll reply with payment instructions before fulfillment begins.
-        </div>
-        <div className="mt-8">
-          <Button size="lg" variant="outline" nativeButton={false} render={<Link href={ckPath('/')}>Back to home</Link>} />
-        </div>
-      </div>
-    );
+    setSubmitting(true);
+    try {
+      const response = await fetch('/snickerdoodle/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = (await response.json()) as { url?: string; error?: string };
+      if (!response.ok || !result.url) throw new Error(result.error ?? 'Checkout is unavailable.');
+      window.location.assign(result.url);
+    } catch (checkoutError) {
+      setError(checkoutError instanceof Error ? checkoutError.message : 'Checkout is unavailable.');
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -185,7 +157,16 @@ export function BriefForm() {
           </select>
         </Field>
 
-        <Field label="Campaign Family" htmlFor="campaignFamily" required>
+        <Field
+          label="Campaign Family"
+          htmlFor="campaignFamily"
+          required
+          hint={
+            suggestedTemplates.length > 0
+              ? `Common packages: ${suggestedTemplates.map((t) => t.title).join('; ')}`
+              : undefined
+          }
+        >
           <select
             id="campaignFamily"
             value={data.campaignFamily}
@@ -437,13 +418,13 @@ export function BriefForm() {
       ) : null}
 
       <div className="rounded-2xl border border-border bg-secondary/40 p-6 sm:p-8">
-        <Button type="submit" size="lg" className="h-11 w-full text-base">
-          Submit Survey for Review
+        <Button type="submit" size="lg" className="h-11 w-full text-base" disabled={submitting}>
+          {submitting ? 'Opening secure checkout…' : `Continue to secure checkout — ${KIT_PRICE}`}
         </Button>
         <p className="mt-3 text-center text-xs leading-relaxed text-muted-foreground">
-          Submitting opens a prepared email with your campaign survey. No information is stored on this website.
-          We&apos;ll reply with the next step before fulfillment begins. Fields marked with{' '}
-          <span className="text-primary">*</span> are required.
+          Your survey is stored securely for fulfillment after payment. Card details are collected by Stripe and never
+          pass through Snickerdoodle. By continuing, you agree to our <Link className="underline" href="/terms">terms</Link> and{' '}
+          <Link className="underline" href="/privacy">privacy notice</Link>. Fields marked with <span className="text-primary">*</span> are required.
         </p>
       </div>
     </form>
